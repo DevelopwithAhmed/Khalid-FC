@@ -33,6 +33,10 @@ export const routes: Routes = [
   { path: 'products', component: ProductsComponent },
   { path: 'contact', component: ContactComponent },
   { path: '**', redirectTo: '', pathMatch: 'full' }
+  {
+    path: 'feature',
+    loadChildren: () => import('./feature/feature.component').then(m => m.FeatureComponent)
+  }
 ];
 
 @NgModule({
